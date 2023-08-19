@@ -26,16 +26,29 @@ Primeiro de um update no `apt-get`.
 apt-get update
 ```
 
-Em seguida instale o `git`.
+Em seguida instale o `git` e o `ssh`.
 
 ```shell
-apt-get install git
+apt-get install git ssh
 ```
+
+Gere a chave `ssh`.
+
+```shell
+ssh-keygen -t ed25519 -C "pikachurando@pm.me"
+```
+
+Execute o `ssh-agent` em segundo plano e adicione a chave.
+```shell
+eval "$(ssh-agent -s)" && ssh-add <caminho para a chave>
+```
+
+> Não esqueça de adicionar a chave pública ao github.
 
 Logo após clone este repositório na pasta raiz ou na pasta `~`.
 
 ```shell
-git clone https://github.com/Billocap/.dotfiles.git
+git clone git@github.com:Billocap/.dotfiles.git
 ```
 
 E por fim crie um link simbólico para o `.gitconfig`.
