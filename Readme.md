@@ -46,3 +46,13 @@ Configure o `zsh` como shell padrão, caso ainda não tenha sido feito.
 ```shell
 sudo usermod --shell $(which zsh) $USER
 ```
+
+### Cofigrurando o `zsh`
+Primeiro vamos configurar o tema. Crie uma link simbólico para o tema.
+```shell
+ln -s ./.dotfiles/plain.zsh-theme ./.oh-my-zsh/themes/plain.zsh-theme
+```
+Agora crie um link simbólico para o `.zshrc` na pasta raiz ou raiz ou na pasta `~`.
+```shell
+ln -s ./.dotfiles/.zshrc .zshrc
+```
