@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "colorScheme": "GitHub Dark",
+    "cursorShape": "filledBox",
+    "elevate": true,
+    "experimental.retroTerminalEffect": false,
+    "font": {
+      "face": "FiraCode NF",
+      "size": 10.0
+    },
+    "opacity": 90,
+    "padding": "10",
+    "scrollbarState": "visible",
+    "useAcrylic": true
+  }
+}
