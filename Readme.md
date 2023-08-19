@@ -44,7 +44,7 @@ E por fim crie um link simbólico para o `.gitconfig`.
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ```
 
-## Configuração Avançada
+### Configuração Avançada
 
 A maioria dos passos a seguir foram tirados do tutorial [Seu terminal pode ser muito, muito mais produtivo 💻](https://ivanaugustobd.medium.com/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2).
 
@@ -72,7 +72,7 @@ Configure o `zsh` como shell padrão, caso ainda não tenha sido feito.
 sudo usermod --shell $(which zsh) $USER
 ```
 
-### Cofigrurando o `zsh`
+#### Cofigrurando o `zsh`
 
 Primeiro vamos configurar o tema. Copie o tema para dentro da pasta raiz do `oh-my-zsh`.
 
