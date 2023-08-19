@@ -41,7 +41,7 @@ git clone https://github.com/Billocap/.dotfiles.git
 E por fim crie um link simbólico para o `.gitconfig`.
 
 ```shell
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ### Configuração Avançada
@@ -77,7 +77,7 @@ sudo usermod --shell $(which zsh) $USER
 Primeiro vamos configurar o tema. Copie o tema para dentro da pasta raiz do `oh-my-zsh`.
 
 ```shell
-cp ~/.dotfiles/themes/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
+ln -s ~/.dotfiles/themes/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
 ```
 
 Em seguida instale o plugin `zsh-syntax-highlighting`.
@@ -96,10 +96,4 @@ Após isso crie um link simbólico para o `.zshrc`.
 
 ```shell
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
-```
-
-E por último instale o `fzf`, respondendo `y` a todas as perguntas.
-
-```shell
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
