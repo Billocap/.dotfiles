@@ -21,9 +21,9 @@ Logo após clone este repositório na pasta raiz ou na pasta `~`.
 ```shell
 git clone https://github.com/Billocap/.dotfiles.git
 ```
-E por fim crie um link simbólico para o `.gitconfig` na pasta raiz ou raiz ou na pasta `~`.
+E por fim crie um link simbólico para o `.gitconfig`.
 ```shell
-ln -s ./dotfiles/.gitconfig .gitconfig
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ## Configuração Avançada
@@ -48,11 +48,27 @@ sudo usermod --shell $(which zsh) $USER
 ```
 
 ### Cofigrurando o `zsh`
-Primeiro vamos configurar o tema. Crie uma link simbólico para o tema.
+Primeiro vamos configurar o tema. Copie o tema para dentro da pasta raiz do `oh-my-zsh`.
 ```shell
-ln -s ./.dotfiles/plain.zsh-theme ./.oh-my-zsh/themes/plain.zsh-theme
+cp ~/.dotfiles/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
 ```
-Agora crie um link simbólico para o `.zshrc` na pasta raiz ou raiz ou na pasta `~`.
+
+#### Instalando os plugins
+O primeiro plugin a ser instalado será o `zsh-syntax-highlighting`.
 ```shell
-ln -s ./.dotfiles/.zshrc .zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Em seguida instale o `zsh-autosuggestions`.
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+E por último instale o `fzf`.
+```shell
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+```
+
+#### Alicando as alterações
+Por fim crie um link simbólico para o `.zshrc`.
+```shell
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ```
