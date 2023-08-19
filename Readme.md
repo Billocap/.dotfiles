@@ -44,7 +44,13 @@ E por fim crie um link simbólico para o `.gitconfig`.
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
-### Configuração Avançada
+### Instalação Automática
+Para realizar a instalção automática execute o comando.
+```shell
+sh ~/.dotfiles/instal.sh
+```
+
+### Configuração Avançada Manual
 
 A maioria dos passos a seguir foram tirados do tutorial [Seu terminal pode ser muito, muito mais produtivo 💻](https://ivanaugustobd.medium.com/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2).
 
