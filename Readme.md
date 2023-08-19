@@ -28,12 +28,10 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
 ## Configuração Avançada
 A maioria dos passos a seguir foram tirados do tutorial [Seu terminal pode ser muito, muito mais produtivo 💻](https://ivanaugustobd.medium.com/seu-terminal-pode-ser-muito-muito-mais-produtivo-3159c8ef77b2).
-
 > Para seguir os passos adiante é necessario o `curl`. Caso não exista na máquina ele pode ser instalado com o comando.
 > ```shell
 > apt-get install curl
 > ```
-
 Primeiro instale o `zsh`.
 ```shell
 apt-get install zsh
@@ -52,23 +50,19 @@ Primeiro vamos configurar o tema. Copie o tema para dentro da pasta raiz do `oh-
 ```shell
 cp ~/.dotfiles/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
 ```
-
-#### Instalando os plugins
-O primeiro plugin a ser instalado será o `zsh-syntax-highlighting`.
+Em seguida instale o plugin `zsh-syntax-highlighting`.
 ```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
-Em seguida instale o `zsh-autosuggestions`.
+E o plugin `zsh-autosuggestions`.
 ```shell
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
-E por último instale o `fzf`.
-```shell
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-```
-
-#### Alicando as alterações
-Por fim crie um link simbólico para o `.zshrc`.
+Após isso crie um link simbólico para o `.zshrc`.
 ```shell
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+```
+E por último instale o `fzf`, respondendo `y` a todas as perguntas.
+```shell
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 ```
