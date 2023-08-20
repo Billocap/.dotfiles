@@ -16,6 +16,30 @@ Após todos esses passos copie o conteúdo do arquivo `./profiles/default.json` 
 > apt-get install wget
 > ```
 
+## Instalação Expressa
+
+Para instalar o ambiante de forma estremamente simples e rápida.
+
+Primeiro crie uma token do Github que possua acesso total aos `repos` e `write:plublic_key`.
+
+Em seguida salve o token em um arquivo de `.env`.
+
+```
+GITHUB_TOKEN=<Seu Token>
+```
+
+Em seguida instale o `curl`.
+
+```shell
+apt-get update && apt-get install curl
+```
+
+E por último rode o comando.
+
+```shell
+sourece .env && curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -O -L https://api.github.com/repos/Billocap/.dotfiles/contents/install
+```
+
 ## Configuração do WSL ou VM
 
 > Os passos a seguir foram realizados em `Ubuntu` e `Debian`.
@@ -42,7 +66,7 @@ ssh-keygen -t ed25519 -C "pikachurando@pm.me" -f ~/.ssh/github
 Execute o `ssh-agent` em segundo plano e adicione a chave.
 
 ```shell
-eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github
+eval $(ssh-agent -s) && ssh-add ~/.ssh/github
 ```
 
 > Não esqueça de adicionar a chave pública ao github.
@@ -68,7 +92,7 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 Para realizar a instalção automática execute o comando.
 
 ```shell
-sh ~/.dotfiles/install
+sh ~/.dotfiles/setup
 ```
 
 ### Configuração Avançada Manual
