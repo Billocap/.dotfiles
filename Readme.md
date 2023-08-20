@@ -35,20 +35,26 @@ apt-get install git ssh
 Gere a chave `ssh`.
 
 ```shell
-ssh-keygen -t ed25519 -C "pikachurando@pm.me"
+[ ! -d ~/.ssh ] && mkdir .ssh
+ssh-keygen -t ed25519 -C "pikachurando@pm.me" -f ~/.ssh/github
 ```
 
 Execute o `ssh-agent` em segundo plano e adicione a chave.
+
 ```shell
-eval "$(ssh-agent -s)" && ssh-add <caminho para a chave>
+eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github
 ```
 
 > Não esqueça de adicionar a chave pública ao github.
+>
+> ```shell
+> cat ./ssh/github.pub
+> ```
 
-Logo após clone este repositório na pasta raiz ou na pasta `~`.
+Logo após clone este repositório.
 
 ```shell
-git clone git@github.com:Billocap/.dotfiles.git
+git clone git@github.com:Billocap/.dotfiles.git ~/.dotfiles
 ```
 
 E por fim crie um link simbólico para o `.gitconfig`.
@@ -58,7 +64,9 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ### Instalação Automática
+
 Para realizar a instalção automática execute o comando.
+
 ```shell
 sh ~/.dotfiles/install.sh
 ```
@@ -82,7 +90,7 @@ apt-get install zsh
 Agora instale o `oh-my-zsh`.
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh; zsh
+curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
 Configure o `zsh` como shell padrão, caso ainda não tenha sido feito.
@@ -102,13 +110,13 @@ ln -s ~/.dotfiles/themes/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
 Em seguida instale o plugin `zsh-syntax-highlighting`.
 
 ```shell
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 ```
 
 E o plugin `zsh-autosuggestions`.
 
 ```shell
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 ```
 
 Após isso crie um link simbólico para o `.zshrc`.
