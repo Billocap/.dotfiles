@@ -68,7 +68,7 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 Para realizar a instalção automática execute o comando.
 
 ```shell
-sh ~/.dotfiles/install.sh
+sh ~/.dotfiles/install
 ```
 
 ### Configuração Avançada Manual
