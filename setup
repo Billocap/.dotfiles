@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ -f ~/install ] && rm ~/install
+
 echo "[*] Installing necessary dependencies ..."
 sudo apt-get install curl zsh
 echo "[*] Installing and configuring zsh ..."
