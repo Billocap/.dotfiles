@@ -15,4 +15,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 [ -f ~/.zshrc ] && rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 
-sudo apt install vim build-essential libssl-dev 
+sudo apt install vim
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+
+sudo apt install build-essential libssl-dev 
