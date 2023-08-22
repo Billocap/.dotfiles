@@ -43,6 +43,7 @@ inoremap <A-up> <esc>:m-2<CR>gi
 inoremap <A-down> <esc>:m+1<CR>gi
 
 let NERDTreeMinimalUI = 1
+let NERDTreeShowHidden = 1
 let b:NERDTreeNaturalSort = 1
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeCustomOpenArgs = {'file': {'where': 't', 'reuse': "all", 'keepopen': 1}, 'dir': {}}
