@@ -13,7 +13,7 @@ Após todos esses passos copie o conteúdo do arquivo `./profiles/default.json` 
 > Caso esteja usando WSL instale o `wget` para poder usar o VSCode.
 >
 > ```
-> apt-get install wget
+> apt install wget
 > ```
 
 ## Instalação Expressa
@@ -31,7 +31,7 @@ GITHUB_TOKEN=<Seu Token>
 Em seguida instale o `curl`.
 
 ```shell
-apt-get update && apt-get install curl
+apt update && apt upgrade && apt install curl
 ```
 
 E por último rode o comando.
@@ -44,16 +44,16 @@ source .env && curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: applicat
 
 > Os passos a seguir foram realizados em `Ubuntu` e `Debian`.
 
-Primeiro de um update no `apt-get`.
+Primeiro de um update no `apt`.
 
 ```shell
-apt-get update
+apt update && apt upgrade
 ```
 
 Em seguida instale o `git` e o `ssh`.
 
 ```shell
-apt-get install git ssh
+apt install git ssh
 ```
 
 Gere a chave `ssh`.
@@ -102,13 +102,13 @@ A maioria dos passos a seguir foram tirados do tutorial [Seu terminal pode ser m
 > Para seguir os passos adiante é necessario o `curl`. Caso não exista na máquina ele pode ser instalado com o comando.
 >
 > ```shell
-> apt-get install curl
+> apt install curl
 > ```
 
 Primeiro instale o `zsh`.
 
 ```shell
-apt-get install zsh
+apt install zsh
 ```
 
 Agora instale o `oh-my-zsh`.

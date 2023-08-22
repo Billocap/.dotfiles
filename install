@@ -2,7 +2,7 @@
 
 . ~/.env
 
-sudo apt-get install git ssh
+sudo apt install git ssh
 
 if [ $KEY_FILE_NAME ]; then
   FILE_NAME=$KEY_FILE_NAME
