@@ -21,6 +21,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
+vim +PlugInstall +qall
+
 sudo apt install build-essential libssl-dev
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
