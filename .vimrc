@@ -2,6 +2,11 @@ call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'xuyuanp/nerdtree-git-plugin'
+
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'gregsexton/gitv'
 call plug#end()
 
 set encoding=utf-8
