@@ -11,9 +11,9 @@ curl -LO \
   -H "Accept: application/vnd.github.v3.raw" \
   https://api.github.com/repos/Billocap/.dotfiles/contents/setup-ssh
 
-bash ~/setup-ssh github
+. ~/setup-ssh github
 
-. ~/.keys.temp
+[ -f ~/setup-ssh ] && rm ~/setup-ssh
 
 HOST=$(hostname)
 TITLE="$USER@$HOST"
@@ -31,7 +31,5 @@ git clone git@github.com:Billocap/.dotfiles.git ~/.dotfiles
 
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
-rm ~/.keys.temp
-
-bash ~/.dotfiles/setup
+. ~/.dotfiles/setup
 

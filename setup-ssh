@@ -18,6 +18,3 @@ if [ ! -f $PRIVATE_FILE ]; then
   ssh-add $PRIVATE_FILE
 fi
 
-echo "PUBLIC_FILE=$PUBLIC_FILE" >> ~/.keys.temp
-echo "PRIVATE_FILE=$PRIVATE_FILE" >> ~/.keys.temp
-
