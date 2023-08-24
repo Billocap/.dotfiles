@@ -21,9 +21,6 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 
-" Start NERDTree and put the cursor in the other window also set the cwd.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && !exists("s:std_in") | execute 'NERDTree' argv()[0] | execute 'normal cd' | wincmd p | endif
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 

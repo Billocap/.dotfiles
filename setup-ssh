@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $1 ]; then
+  FILE_NAME=$1
+else
+  read -p "Enter a file name: " FILE_NAME
+fi
+
+PRIVATE_FILE=~/.ssh/$FILE_NAME
+PUBLIC_FILE=$PRIVATE_FILE.pub
+
+[ ! $(pgrep -x ssh-agent) ] && eval $(ssh-agent -s)
+
+if [ ! -f $PRIVATE_FILE ]; then
+  [ ! -d ~/.ssh ] && mkdir .ssh
+  ssh-keygen -t ed25519 -C "pikachurando@pm.me" -f $PRIVATE_FILE -P ""
+  
+  ssh-add $PRIVATE_FILE
+fi
+
+echo "PUBLIC_FILE=$PUBLIC_FILE" >> ~/.keys.temp
+echo "PRIVATE_FILE=$PRIVATE_FILE" >> ~/.keys.temp
+
