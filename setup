@@ -13,6 +13,7 @@ ln -s ~/.dotfiles/themes/plain.zsh-theme ~/.oh-my-zsh/themes/plain.zsh-theme
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/supercrabtree/k ~/.oh-my-zsh/custom/plugins/k
 
 [ -f ~/.zshrc ] && rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc

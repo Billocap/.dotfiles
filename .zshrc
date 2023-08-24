@@ -75,6 +75,7 @@ plugins=(
   dnf
   zsh-syntax-highlighting
   zsh-autosuggestions
+  k
 )
 
 source $ZSH/oh-my-zsh.sh
