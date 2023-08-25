@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt install man
-
 [ -f ~/install ] && rm ~/install
 
 sudo apt install zsh
