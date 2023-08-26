@@ -2,7 +2,7 @@
 
 . ~/.env
 
-sudo apt install git ssh man
+sudo apt install git ssh man -y
 
 AUTHORIZATION="Authorization: token $GITHUB_TOKEN"
 
