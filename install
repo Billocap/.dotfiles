@@ -1,24 +1,32 @@
 #!/bin/bash
 
+# Soureces .env
 . ~/.env
 
-sudo apt install git ssh man -y
+# Quality of life deps
+sudo apt install man ffmpeg unzip -y
 
+# Necessary deps
+sudo apt install git ssh -y
+
+# Necessary variables
 AUTHORIZATION="Authorization: token $GITHUB_TOKEN"
 
+# Get the ssh-setup file
 curl -LO \
   -H  "$AUTHORIZATION" \
   -H "Accept: application/vnd.github.v3.raw" \
   https://api.github.com/repos/Billocap/.dotfiles/contents/setup-ssh
 
+# Setup ssh
 . ~/setup-ssh github
 
-[ -f ~/setup-ssh ] && rm ~/setup-ssh
-
+# Variables for cloning the repo
 HOST=$(hostname)
 TITLE="$USER@$HOST"
 KEY=$(cat $PUBLIC_FILE)
 
+# Sets the appropriate key
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github+json" \
@@ -27,9 +35,17 @@ curl -L \
   https://api.github.com/user/keys \
   -d "{\"title\":\"$TITLE\", \"key\":\"$KEY\"}"
 
+# Clones the repo
 git clone git@github.com:Billocap/.dotfiles.git ~/.dotfiles
 
+# Applies git hub configs
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
-. ~/.dotfiles/setup
+# Install all deps
+. ~/.dotfiles/modules/zsh
+. ~/.dotfiles/modules/vim
+. ~/.dotfiles/modules/nvm
+. ~/.dotfiles/modules/bun
 
+# Clean up
+. ~/.dotfiles/cleanup

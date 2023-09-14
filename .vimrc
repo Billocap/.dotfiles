@@ -15,7 +15,6 @@ highlight PmenuSel ctermfg=0 ctermbg=3 guifg=Black guibg=Yellow
 
 set number
 
-color desert
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
