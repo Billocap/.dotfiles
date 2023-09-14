@@ -1,5 +1,10 @@
 #!/bin/bash
 
 # Installs Meilisearch
-curl -L https://install.meilisearch.com | sh
+
+# Add Meilisearch package
+echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" | sudo tee /etc/apt/sources.list.d/fury.list
+
+# Update APT and install Meilisearch
+sudo apt install meilisearch -y
 
