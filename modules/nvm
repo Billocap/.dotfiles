@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Installs NVM
-
-# Install necessary deps
-sudo apt install build-essential libssl-dev -y
-
-# Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
