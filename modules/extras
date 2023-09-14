@@ -6,5 +6,5 @@
 echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" | sudo tee /etc/apt/sources.list.d/fury.list
 
 # Update APT and install Meilisearch
-sudo apt install meilisearch -y
+sudo apt update && sudo apt install meilisearch -y
 
