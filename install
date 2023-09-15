@@ -44,8 +44,8 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 # Install all deps
 . ~/.dotfiles/modules/zsh
 . ~/.dotfiles/modules/vim
-. ~/.dotfiles/modules/nvm
-. ~/.dotfiles/modules/bun
+. ~/.dotfiles/modules/node
+. ~/.dotfiles/modules/extras
 
 # Clean up
 . ~/.dotfiles/cleanup
