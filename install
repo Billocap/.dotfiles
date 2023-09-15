@@ -11,6 +11,8 @@ sudo apt install git ssh -y
 
 # Necessary variables
 AUTHORIZATION="Authorization: token $GITHUB_TOKEN"
+HOME_FOLDER=~/.dotfiles
+MODULES_FOLDER=$HOME_FOLDER/modules
 
 # Get the ssh-setup file
 curl -LO \
@@ -36,16 +38,13 @@ curl -L \
   -d "{\"title\":\"$TITLE\", \"key\":\"$KEY\"}"
 
 # Clones the repo
-git clone git@github.com:Billocap/.dotfiles.git ~/.dotfiles
+git clone git@github.com:Billocap/.dotfiles.git $HOME_FOLDER
 
 # Applies git hub configs
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s $HOME_FOLDER/.gitconfig ~/.gitconfig
 
 # Install all deps
-. ~/.dotfiles/modules/zsh
-. ~/.dotfiles/modules/vim
-. ~/.dotfiles/modules/node
-. ~/.dotfiles/modules/extras
+ls -f $MODULES_FOLDER | while read file; do . $MODULES_FOLDER/$file; done
 
 # Clean up
-. ~/.dotfiles/cleanup
+. $HOME_FOLDER/cleanup
