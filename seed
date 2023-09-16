@@ -8,7 +8,7 @@ sudo apt install git figlet -y
 
 git clone "https://github.com/xero/figlet-fonts.git"
 
-mv ~/figlet-font/* /usr/share/figlet
+mv ~/figlet-fonts/* /usr/share/figlet
 
 curl -LO \
   -H  "$AUTHORIZATION" \
