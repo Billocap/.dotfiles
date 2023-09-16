@@ -7,18 +7,26 @@ BANNER_FILE=$(mktemp)
 # Data variables
 HEIGHT=10
 
+get_curpos () {
+  echo -e "\e[6n"
+  read -s -d\[ garbage
+  read -s -d R RAWPOS
+
+  IFS=';' read -ra CURPOS <<< "$RAWPOS"
+}
+
 clamp_output () {
-  echo "$1" >> $CONSOLE_FILE # Print line to temp file
+  echo "$1" >> $CONSOLE_FILE
 
-  COUNT=$(wc -l < $CONSOLE_FILE) # Number of lines in the temp file
-  DIFF=$(($HEIGHT - $COUNT)) # Difference between screen size and file size
-  MOVE=$(($DIFF >= 0 ? $DIFF : 0)) # Amount of lines to go down
+  COUNT=$(wc -l < $CONSOLE_FILE)
+  DIFF=$(($HEIGHT - $COUNT))
+  MOVE=$(($DIFF >= 0 ? $DIFF : 0))
 
-  tput sc && tput ed && tput cud $MOVE # Save cursor position before moving it down
+  tput cup $INITIAL_LINE 0 && tput ed
   
-  tail -n $HEIGHT $CONSOLE_FILE | cut -c-$COLUMNS # Print n last lines
+  tput cud $MOVE
   
-  tput rc # Restore cursor position
+  tail -n $HEIGHT $CONSOLE_FILE | cut -c-$COLUMNS
 }
 
 tput civis && clear && tput home && echo ""
@@ -34,10 +42,14 @@ echo "⎢  Installer for necessary apps and config files  ⎢"
 echo "⎢  Created by Gabriel Quintino - 2023             ⎢"
 echo "⎣                                                 ⎦"
 
-eval $1 2>&1 | while read line; do clamp_output "$line"; done
+get_curpos
 
-tput cud $(($HEIGHT + 1))
+INITIAL_LINE=$((CURPOS[0] - 1))
+
+eval $1 2>&1 | while read line; do clamp_output "$line"; done
 
 [[ -f $CONSOLE_FILE ]] && rm $CONSOLE_FILE
 [[ -f $BANNER_FILE ]] && rm $BANNER_FILE
+
+tput cnorm
 
