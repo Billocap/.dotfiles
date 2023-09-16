@@ -12,4 +12,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
 # Install the plugins
-vim +PlugInstall +qall
+# vim +PlugInstall +qall

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ~/.env
+
 AUTHORIZATION="Authorization: token $GITHUB_TOKEN"
 
 sudo apt install figlet -y
@@ -14,5 +16,5 @@ curl -LO \
   -H "Accept: application/vnd.github.v3.raw" \
   https://api.github.com/repos/Billocap/.dotfiles/contents/install
 
-bash screen "bash install"
+. ~/screen "bash install"
 
