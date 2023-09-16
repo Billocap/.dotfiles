@@ -1,4 +1,6 @@
 #!/bin/bash
 
 [ -f ~/setup-ssh ] && rm ~/setup-ssh
-[ -f ~/setup-ssh ] && rm ~/install
+[ -f ~/install ] && rm ~/install
+[ -f ~/seed ] && rm ~/seed
+

@@ -44,7 +44,10 @@ git clone git@github.com:Billocap/.dotfiles.git $HOME_FOLDER
 ln -s $HOME_FOLDER/.gitconfig ~/.gitconfig
 
 # Install all deps
-ls -f $MODULES_FOLDER | while read file; do . $MODULES_FOLDER/$file; done
+MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
+for FILE in $MODULES; do
+  . $MODULES_FOLDER/$FILE
+done
 
 # Clean up
 . $HOME_FOLDER/cleanup
