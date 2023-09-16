@@ -7,7 +7,7 @@
 sudo apt install wget man ffmpeg unzip -y
 
 # Necessary deps
-sudo apt install git ssh -y
+sudo apt install ssh -y
 
 # Necessary variables
 AUTHORIZATION="Authorization: token $GITHUB_TOKEN"

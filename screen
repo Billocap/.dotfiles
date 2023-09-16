@@ -23,8 +23,7 @@ clamp_output () {
 
 clear && echo ""
 # Generate the banner file
-# figlet ".dotfiles" -f Roman | head -n 8 >> $BANNER_FILE
-figlet ".dotfiles"| head -n 8 >> $BANNER_FILE
+figlet ".dotfiles" -f Roman | head -n 8 >> $BANNER_FILE
 
 tput setaf 3
 cut -c-$COLUMNS $BANNER_FILE
