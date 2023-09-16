@@ -21,7 +21,7 @@ clamp_output () {
   tput rc # Restore cursor position
 }
 
-clear && echo ""
+tput civis && clear && tput home && echo ""
 # Generate the banner file
 figlet ".dotfiles" -f Roman | head -n 8 >> $BANNER_FILE
 
