@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# File variables
+CONSOLE_FILE=$(mktemp)
+BANNER_FILE=$(mktemp)
+
+# Data variables
+HEIGHT=10
+
+clamp_output () {
+  echo "$1" >> $CONSOLE_FILE # Print line to temp file
+
+  COUNT=$(wc -l < $CONSOLE_FILE) # Number of lines in the temp file
+  DIFF=$(($HEIGHT - $COUNT)) # Difference between screen size and file size
+  MOVE=$(($DIFF >= 0 ? $DIFF : 0)) # Amount of lines to go down
+
+  tput sc && tput ed && tput cud $MOVE # Save cursor position before moving it down
+  
+  tail -n $HEIGHT $CONSOLE_FILE | cut -c-$COLUMNS # Print n last lines
+  
+  tput rc # Restore cursor position
+}
+
+clear && echo ""
+# Generate the banner file
+# figlet ".dotfiles" -f Roman | head -n 8 >> $BANNER_FILE
+figlet ".dotfiles"| head -n 8 >> $BANNER_FILE
+
+tput setaf 3
+cut -c-$COLUMNS $BANNER_FILE
+tput setaf 7
+
+echo "⎡                                                 ⎤"
+echo "⎢  Installer for necessary apps and config files  ⎢"
+echo "⎢  Created by Gabriel Quintino - 2023             ⎢"
+echo "⎣                                                 ⎦"
+
+eval $1 2>&1 | while read line; do clamp_output "$line"; done
+
+tput cud $(($HEIGHT + 1))
+
+[[ -f $CONSOLE_FILE ]] && rm $CONSOLE_FILE
+[[ -f $BANNER_FILE ]] && rm $BANNER_FILE
+

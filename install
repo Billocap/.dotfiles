@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Soureces .env
+# Source .env
 . ~/.env
 
 # Quality of life deps
-sudo apt install man ffmpeg unzip -y
+sudo apt install wget man ffmpeg unzip -y
 
 # Necessary deps
 sudo apt install git ssh -y
