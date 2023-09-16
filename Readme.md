@@ -31,7 +31,7 @@ GITHUB_TOKEN=<Seu Token>
 Em seguida instale o `curl`.
 
 ```shell
-apt update && apt upgrade && apt install curl
+sudo apt update && sudo apt upgrade -y && sudo apt install curl -y
 ```
 
 E por último rode o comando.
