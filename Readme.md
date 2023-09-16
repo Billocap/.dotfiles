@@ -37,7 +37,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt install curl -y
 E por último rode o comando.
 
 ```shell
-source .env && curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -O -L https://api.github.com/repos/Billocap/.dotfiles/contents/install
+source .env && curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -O -L https://api.github.com/repos/Billocap/.dotfiles/contents/seed
 ```
 
 ## Configuração do WSL ou VM
