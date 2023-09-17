@@ -12,6 +12,32 @@ Repository for configuring my Linux based enviroments, I use those config mostly
 
 All though that's a very personal and subjective project feel free to Fork it or recomend configs and apps.
 
+## Install
+
+Run the following command in the machine you plan to install the configs.
+
+```shell
+git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/seed
+```
+
+**!important**
+
+> To perform the installation you will need `git` and `curl`. In case you don't have those apps use the command bellow to install them.
+> ```shell
+> sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
+> ```
+
+## Windows Terminal Config
+
+As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) machines, so here's a brief explanation on how my Windows Terminal is configured.
+
+- Download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br&icid=CNavAppsWindowsApps): You can find it on the Windows App Store.
+- Install `Fira Code NF` on Windows, this font will allow Windows Terminal to used lots of cool icons.
+- (Optional) Open your Windows Terminal's `settings.json` file and copy the contents of `.dotfiles/misc/windows-terminal/schemes.json` into the `schemes` key of your `settings.json` file, **Don't forget to remove the brackets when pasting the schemes**.
+- (Optional) You can also copy the default profile from `.dotfiles/misc/windows-terminal/default.json`.
+
+> Saddly the Windows configs are manual ¯\\\_(ツ)\_/¯.
+
 ## Content
 
 Here's a list of all the deps and apps I configured:
@@ -41,29 +67,3 @@ Here's a list of all the deps and apps I configured:
 - [Unzip](https://linux.die.net/man/1/unzip): Dealling with `zip` files.
 - [FIGlet](http://www.figlet.org): ASCII art headers.
 - [curl](https://curl.se): For requesting data.
-
-## Windows Terminal Config
-
-As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) machines, so here's a brief explanation on how my Windows Terminal is configured.
-
-- Download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br&icid=CNavAppsWindowsApps): You can find it on the Windows App Store.
-- Install `Fira Code NF` on Windows, this font will allow Windows Terminal to used lots of cool icons.
-- (Optional) Open your Windows Terminal's `settings.json` file and copy the contents of `.dotfiles/misc/windows-terminal/schemes.json` into the `schemes` key of your `settings.json` file, **Don't forget to remove the brackets when pasting the schemes**.
-- (Optional) You can also copy the default profile from `.dotfiles/misc/windows-terminal/default.json`.
-
-> Saddly the Windows configs are manual ¯\\\_(ツ)\_/¯.
-
-## Install
-
-To perform the express installation you will need `git` and `curl`, in case you don't have them use the following command.
-
-```shell
-sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
-```
-
-Then run the following command.
-
-```shell
-git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/seed
-```
-
