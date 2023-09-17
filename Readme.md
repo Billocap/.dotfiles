@@ -55,7 +55,7 @@ Here's a list of all the deps and apps I configured:
     - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Highlight the command so you can spot any typos or verify if the command realy exists.
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Auto completes commands.
     - [k](https://github.com/supercrabtree/k): Diretory listing with git features.
-- Node / JavaScript: I don't install node directly, but here's a list of my node related deps.
+- Node: I don't install node directly, here's a list of node related deps.
     - [Node Version Manager](https://github.com/nvm-sh/nvm): Super usefull for dealling with node.
     - [Bun](https://bun.sh): Added as a bonus, just for testing.
 - [Meilisearch](https://www.meilisearch.com): Used at my job as a search engine.
