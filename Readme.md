@@ -51,15 +51,17 @@ As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL
 - (Optional) Open your Windows Terminal's `settings.json` file and copy the contents of `.dotfiles/misc/windows-terminal/schemes.json` into the `schemes` key of your `settings.json` file, **Don't forget to remove the brackets when pasting the schemes**.
 - (Optional) You can also copy the default profile from `.dotfiles/misc/windows-terminal/default.json`.
 
-> Saddly the Windows configs are manual ¯\_(ツ)_/¯.
+> Saddly the Windows configs are manual ¯\\_(ツ)_/¯.
 
-## Express Install
+## Install
 
-> To perform the express installation you will need `git` and `curl`, in case you don't have them use the following command.
->
-> ```shell
-> sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
-> ```
+To perform the express installation you will need `git` and `curl`, in case you don't have them use the following command.
+
+```shell
+sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
+```
+
+Then run the following command.
 
 ```shell
 git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash "~/.dotfiles/seed" 
