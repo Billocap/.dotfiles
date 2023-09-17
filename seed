@@ -5,7 +5,7 @@ HOME_FOLDER=~/.dotfiles
 
 sudo apt install figlet -y
 
-sudo mv $HOME_FOLDER/fonts/figlet/* /usr/share/figlet
+sudo cp $HOME_FOLDER/fonts/figlet/* /usr/share/figlet
 
 . $HOME_FOLDER/screen "bash ~/.dotfiles/install"
 
