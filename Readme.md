@@ -46,46 +46,24 @@ Here's a list of all the deps and apps I configured:
 
 As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) machines, so here's a brief explanation on how my Windows Terminal is configured.
 
-1. Download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br&icid=CNavAppsWindowsApps): You can find it on the Windows App Store.
+- Download [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br&icid=CNavAppsWindowsApps): You can find it on the Windows App Store.
+- Install `Fira Code NF` on Windows, this font will allow Windows Terminal to used lots of cool icons.
+- (Optional) Open your Windows Terminal's `settings.json` file and copy the contents of `.dotfiles/misc/windows-terminal/schemes.json` into the `schemes` key of your `settings.json` file, **Don't forget to remove the brackets when pasting the schemes**.
+- (Optional) You can also copy the default profile from `.dotfiles/misc/windows-terminal/default.json`.
 
+> Saddly the Windows configs are manual ¯\_(ツ)_/¯.
 
-## Configuração do Powershell
+## Express Install
 
-Caso esteja utilizando o `powershell` copie o conteúdo do arquivo `./themes/github-dark.json` dentro da chave `schemes` no seu arquivo de configurações do `powershell`. Também recomendo instalar e configurar a fonte `Fira Code NF` no terminal.
+```shell
+source .env && git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash "~/.dotfiles/seed" 
+```
 
-Após todos esses passos copie o conteúdo do arquivo `./profiles/default.json` para o seu arquivo de configurações do `powershell`.
-
-## Configuração do VSCode
-
-> Caso esteja usando WSL instale o `wget` para poder usar o VSCode.
+> To perform the express installation you will need `git` and `curl`, in case you don't have them use the following command.
 >
+> ```shell
+> sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
 > ```
-> apt install wget
-> ```
-
-## Instalação Expressa
-
-Para instalar o ambiante de forma estremamente simples e rápida.
-
-Primeiro crie uma token do Github que possua acesso total aos `repos` e `write:plublic_key`.
-
-Em seguida salve o token em um arquivo de `.env`.
-
-```
-GITHUB_TOKEN=<Seu Token>
-```
-
-Em seguida instale o `curl`.
-
-```shell
-sudo apt update && sudo apt upgrade -y && sudo apt install curl -y
-```
-
-E por último rode o comando.
-
-```shell
-source .env && curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -O -L https://api.github.com/repos/Billocap/.dotfiles/contents/seed
-```
 
 ## Configuração do WSL ou VM
 

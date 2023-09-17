@@ -1,24 +1,11 @@
 #!/bin/bash
 
-. ~/.env
+# Necessary variables
+HOME_FOLDER=~/.dotfiles
 
-AUTHORIZATION="Authorization: token $GITHUB_TOKEN"
+sudo apt install figlet -y
 
-sudo apt install git figlet -y
+sudo mv $HOME_FOLDER/fonts/figlet/* /usr/share/figlet
 
-git clone "https://github.com/xero/figlet-fonts.git"
-
-sudo mv ~/figlet-fonts/* /usr/share/figlet
-
-curl -LO \
-  -H  "$AUTHORIZATION" \
-  -H "Accept: application/vnd.github.v3.raw" \
-  https://api.github.com/repos/Billocap/.dotfiles/contents/screen
-
-curl -LO \
-  -H  "$AUTHORIZATION" \
-  -H "Accept: application/vnd.github.v3.raw" \
-  https://api.github.com/repos/Billocap/.dotfiles/contents/install
-
-. ~/screen "bash install"
+. $HOME_FOLDER/screen "bash ~/.dotfiles/install"
 
