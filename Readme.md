@@ -17,7 +17,7 @@ All though that's a very personal and subjective project feel free to Fork it or
 Run the following command in the machine you plan to install the configs.
 
 ```shell
-git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/seed
+git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/install
 ```
 
 **!important**
