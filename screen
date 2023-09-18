@@ -31,11 +31,11 @@ clamp_output () {
 
 tput civis && clear && tput home && echo ""
 # Generate the banner file
-figlet ".dotfiles" -f Roman | head -n 8 >> $BANNER_FILE
+figlet ".dotfiles" -f Roman | head -n 8 > $BANNER_FILE
 
 tput setaf 3
 cut -c-$COLUMNS $BANNER_FILE
-tput setaf 7
+tput sgr0
 
 echo "⎡                                                 ⎤"
 echo "⎢  Installer for necessary apps and config files  ⎢"
@@ -46,7 +46,7 @@ get_curpos
 
 INITIAL_LINE=$((CURPOS[0] - 1))
 
-eval $1 2>&1 | while read line; do clamp_output "$line"; done
+eval $1 2>&1 | while read LINE; do clamp_output "$LINE"; done
 
 [[ -f $CONSOLE_FILE ]] && rm $CONSOLE_FILE
 [[ -f $BANNER_FILE ]] && rm $BANNER_FILE

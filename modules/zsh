@@ -21,3 +21,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_FOLD
 git clone https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_FOLDER/zsh-autosuggestions
 git clone https://github.com/supercrabtree/k $PLUGINS_FOLDER/k
 
+# Applies the changes
+[ -f ~/.zshrc ] && rm ~/.zshrc
+ln -s $CONFIGS_FOLDER/.zshrc ~/.zshrc

@@ -8,6 +8,8 @@ MODULES_FOLDER=$HOME_FOLDER/modules
 CONFIGS_FOLDER=$HOME_FOLDER/configs
 FONTS_FOLDER=$HOME_FOLDER/fonts
 
+ln -s $CONFIGS_FOLDER/.gitconfig ~/.gitconfig
+
 install() {
   sudo apt install ssh wget man ffmpeg unzip -y
   cp $FONTS_FOLDER/figlet/* /usr/share/figlet
@@ -17,13 +19,7 @@ install() {
   for MODULE in $MODULES; do
     . $MODULES_FOLDER/$MODULE
   done
-
-  # Applies the configs
-  CONFIGS=$(ls -f $CONFIGS_FOLDER -I . -I ..)
-  for CONFIG in $CONFIGS; do
-    ln -s $CONFIGS_FOLDER/$CONFIG ~/$CONFIG
-  done
-}
+ }
 
 . $HOME_FOLDER/screen "install"
 
