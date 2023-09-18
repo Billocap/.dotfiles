@@ -1,21 +1,29 @@
 #!/bin/bash
 
-# Quality of life deps
-sudo apt install wget man ffmpeg unzip -y
-
-# Necessary deps
-sudo apt install ssh -y
+sudo apt install figlet -y
 
 # Necessary variables
 HOME_FOLDER=~/.dotfiles
 MODULES_FOLDER=$HOME_FOLDER/modules
+CONFIGS_FOLDER=$HOME_FOLDER/configs
+FONTS_FOLDER=$HOME_FOLDER/fonts
 
-# Applies git hub configs
-ln -s $HOME_FOLDER/.gitconfig ~/.gitconfig
+install() {
+  sudo apt install ssh wget man ffmpeg unzip -y
+  sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
+  
+  # Applies the configs
+  CONFIGS=$(ls -f $CONFIGS_FOLDER -I . -I ..)
+  for CONFIG in $CONFIGS; do
+    ln -s $CONFIGS_FOLDER/$CONFIG ~/$CONFIG
+  done
+  
+  # Install all deps
+  MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
+  for MODULE in $MODULES; do
+    . $MODULES_FOLDER/$MODULE
+  done
+}
 
-# Install all deps
-MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
-for FILE in $MODULES; do
-  . $MODULES_FOLDER/$FILE
-done
+. $HOME_FOLDER/screen "install"
 

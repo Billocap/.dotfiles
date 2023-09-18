@@ -1,8 +1,0 @@
-#!/bin/bash
-
-[ -d ~/figlet-fonts ] && rm -rf ~/figlet-fonts
-[ -f ~/screen ] && rm ~/screen
-[ -f ~/setup-ssh ] && rm ~/setup-ssh
-[ -f ~/install ] && rm ~/install
-[ -f ~/seed ] && rm ~/seed
-
