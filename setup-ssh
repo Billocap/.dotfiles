@@ -9,6 +9,12 @@ else
   read -p "Enter a file name: " FILE_NAME
 fi
 
+if [ $2 ]; then
+  EMAIL=$2
+else
+  read -p "Enter email: " EMAIL
+fi
+
 # Sets up the appropriate names
 PRIVATE_FILE=~/.ssh/$FILE_NAME
 PUBLIC_FILE=$PRIVATE_FILE.pub
@@ -20,7 +26,7 @@ PUBLIC_FILE=$PRIVATE_FILE.pub
 if [ ! -f $PRIVATE_FILE ]; then
   [ ! -d ~/.ssh ] && mkdir .ssh
 
-  ssh-keygen -t ed25519 -C "pikachurando@pm.me" -f $PRIVATE_FILE -P ""  
+  ssh-keygen -t ed25519 -C $EMAIL -f $PRIVATE_FILE -P ""  
 fi
 
 # Adds the private file to the ssh-agent
