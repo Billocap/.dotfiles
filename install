@@ -12,7 +12,6 @@ ln -s $CONFIGS_FOLDER/.gitconfig ~/.gitconfig
 
 install() {
   sudo apt install ssh wget man ffmpeg unzip -y
-  sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
   # Install all deps
   MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
@@ -20,6 +19,8 @@ install() {
     . $MODULES_FOLDER/$MODULE
   done
  }
+
+sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
 . $HOME_FOLDER/screen "install"
 
