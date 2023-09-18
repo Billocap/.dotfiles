@@ -10,18 +10,18 @@ FONTS_FOLDER=$HOME_FOLDER/fonts
 
 install() {
   sudo apt install ssh wget man ffmpeg unzip -y
-  sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
-  
-  # Applies the configs
-  CONFIGS=$(ls -f $CONFIGS_FOLDER -I . -I ..)
-  for CONFIG in $CONFIGS; do
-    ln -s $CONFIGS_FOLDER/$CONFIG ~/$CONFIG
-  done
-  
+  cp $FONTS_FOLDER/figlet/* /usr/share/figlet
+
   # Install all deps
   MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
   for MODULE in $MODULES; do
     . $MODULES_FOLDER/$MODULE
+  done
+
+  # Applies the configs
+  CONFIGS=$(ls -f $CONFIGS_FOLDER -I . -I ..)
+  for CONFIG in $CONFIGS; do
+    ln -s $CONFIGS_FOLDER/$CONFIG ~/$CONFIG
   done
 }
 
