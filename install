@@ -7,6 +7,7 @@ HOME_FOLDER=~/.dotfiles
 MODULES_FOLDER=$HOME_FOLDER/modules
 CONFIGS_FOLDER=$HOME_FOLDER/configs
 FONTS_FOLDER=$HOME_FOLDER/fonts
+MISC_FOLDER=$HOME_FOLDER/misc
 
 ln -s $CONFIGS_FOLDER/.gitconfig ~/.gitconfig
 

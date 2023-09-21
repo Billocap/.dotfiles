@@ -14,7 +14,7 @@ sudo usermod --shell $(which zsh) $USER
 
 # Installs the theme for zsh
 [ -f $THEMES_FOLDER/plain.zsh-theme ] && rm $THEMES_FOLDER/plain.zsh-theme
-ln -s ~/.dotfiles/misc/zsh/plain.zsh-theme $THEMES_FOLDER/plain.zsh-theme
+ln -s $MISC_FOLDER/zsh/plain.zsh-theme $THEMES_FOLDER/plain.zsh-theme
 
 # Installs the necessary plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $PLUGINS_FOLDER/zsh-syntax-highlighting
