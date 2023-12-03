@@ -19,7 +19,7 @@ install() {
   for MODULE in $MODULES; do
     . $MODULES_FOLDER/$MODULE
   done
- }
+}
 
 sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
