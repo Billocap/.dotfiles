@@ -7,3 +7,6 @@ echo "deb [trusted=yes] https://apt.fury.io/meilisearch/ /" | sudo tee /etc/apt/
 
 # Update APT and install Meilisearch
 sudo apt update && sudo apt install meilisearch -y
+
+# Installs NASM
+sudo apt install nasm

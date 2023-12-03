@@ -67,3 +67,4 @@ Here's a list of all the deps and apps I configured:
 - [Unzip](https://linux.die.net/man/1/unzip): Dealling with `zip` files.
 - [FIGlet](http://www.figlet.org): ASCII art headers.
 - [curl](https://curl.se): For requesting data.
+- [NASM](https://www.nasm.us): For assembly programming.
