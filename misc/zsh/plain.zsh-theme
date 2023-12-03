@@ -9,14 +9,14 @@
 #   - git plugin to display current branch and status
 
 # git plugin
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%} [ "
-ZSH_THEME_GIT_PROMPT_SUFFIX="] %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%%"
-ZSH_THEME_GIT_PROMPT_ADDED="+"
-ZSH_THEME_GIT_PROMPT_MODIFIED="*"
-ZSH_THEME_GIT_PROMPT_RENAMED="~"
-ZSH_THEME_GIT_PROMPT_DELETED="!"
-ZSH_THEME_GIT_PROMPT_UNMERGED="?"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}  "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED=" "
+ZSH_THEME_GIT_PROMPT_ADDED=" "
+ZSH_THEME_GIT_PROMPT_MODIFIED=" "
+ZSH_THEME_GIT_PROMPT_RENAMED=" "
+ZSH_THEME_GIT_PROMPT_DELETED=" "
+ZSH_THEME_GIT_PROMPT_UNMERGED=" "
 
 function zsh_essembeh_gitstatus {
         ref=$(git symbolic-ref HEAD 2> /dev/null) || return
