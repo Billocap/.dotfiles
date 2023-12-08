@@ -17,7 +17,7 @@ install() {
   # Install all deps
   MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
   for MODULE in $MODULES; do
-    . $MODULES_FOLDER/$MODULE.sh
+    . $MODULES_FOLDER/$MODULE
   done
 }
 
