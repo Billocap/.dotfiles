@@ -17,11 +17,11 @@ install() {
   # Install all deps
   MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
   for MODULE in $MODULES; do
-    . $MODULES_FOLDER/$MODULE
+    . $MODULES_FOLDER/$MODULE.sh
   done
 }
 
 sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
-. $HOME_FOLDER/screen "install"
+. $HOME_FOLDER/screen.sh "install"
 
