@@ -48,8 +48,8 @@ INITIAL_LINE=$((CURPOS[0] - 1))
 
 eval $1 2>&1 | while read LINE; do clamp_output "$LINE"; done
 
-[[ -f $CONSOLE_FILE ]] && rm $CONSOLE_FILE
-[[ -f $BANNER_FILE ]] && rm $BANNER_FILE
+[ -f $CONSOLE_FILE ] && rm $CONSOLE_FILE
+[ -f $BANNER_FILE ] && rm $BANNER_FILE
 
 tput cnorm
 
