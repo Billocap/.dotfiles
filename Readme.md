@@ -8,9 +8,9 @@
 Y8P `Y8bod88P" `Y8bod8P'   "888" o888o   o888o o888o `Y8bod8P' 8""888P'
 </pre>
 
-Repository for configuring my Linux based enviroments, I use those config mostly for WSL Ubuntu and Debian. This was supossed to be a simple project but a got carried away.
+Repository for configuring my Linux based environments, I use those config mostly for WSL Ubuntu and Debian. This was supposed to be a simple project but a got carried away.
 
-All though that's a very personal and subjective project feel free to Fork it or recomend configs and apps.
+All though that's a very personal and subjective project feel free to Fork it or recommend configs and apps.
 
 ## Install
 
@@ -23,6 +23,7 @@ git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfile
 **!important**
 
 > To perform the installation you will need `git` and `curl`. In case you don't have those apps use the command bellow to install them.
+>
 > ```shell
 > sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
 > ```
@@ -43,28 +44,28 @@ As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL
 Here's a list of all the deps and apps I configured:
 
 - [Vim](https://www.vim.org): I opted for Vim because I wanted to keep my text editor simple as I used Vscode for work.
-    - [vim-plug](https://github.com/junegunn/vim-plug): Plugin Manager for Vim. Don't forget to run a `:PlugInstall` once you open Vim.
-    - [NERDTree](https://github.com/preservim/nerdtree): For better navigation in the files folder.
-        - [vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-        - [nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin)
-    - [VimDevIcons](https://github.com/ryanoasis/vim-devicons): Adds some fancy icons to your files in the file explorer.
-    - [fugitive.vim](https://github.com/tpope/vim-fugitive): Allows you to run `git` commands from Vim.
-    - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Side bar the shows what modifications were made in the file.
+  - [vim-plug](https://github.com/junegunn/vim-plug): Plugin Manager for Vim. Don't forget to run a `:PlugInstall` once you open Vim.
+  - [NERDTree](https://github.com/preservim/nerdtree): For better navigation in the files folder.
+    - [vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
+    - [nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin)
+  - [VimDevIcons](https://github.com/ryanoasis/vim-devicons): Adds some fancy icons to your files in the file explorer.
+  - [fugitive.vim](https://github.com/tpope/vim-fugitive): Allows you to run `git` commands from Vim.
+  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Side bar the shows what modifications were made in the file.
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh): I use `zsh` as my main shell.
-    - Plain Theme: Theme for zsh I wrote based on the default Linux theme.
-    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Highlight the command so you can spot any typos or verify if the command realy exists.
-    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Auto completes commands.
-    - [k](https://github.com/supercrabtree/k): Diretory listing with git features.
+  - Plain Theme: Theme for zsh I wrote based on the default Linux theme.
+  - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Highlight the command so you can spot any typos or verify if the command really exists.
+  - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): Auto completes commands.
+  - [k](https://github.com/supercrabtree/k): Directory listing with git features.
 - Node: I don't install node directly, here's a list of node related deps.
-    - [Node Version Manager](https://github.com/nvm-sh/nvm): Super usefull for dealling with node.
-    - [Bun](https://bun.sh): Added as a bonus, just for testing.
+  - [Node Version Manager](https://github.com/nvm-sh/nvm): Super useful for dealing with node.
+  - [Bun](https://bun.sh): Added as a bonus, just for testing.
 - [Meilisearch](https://www.meilisearch.com): Used at my job as a search engine.
 - [Wget](https://www.gnu.org/software/wget/): Necessary for running Vscode on WSL.
 - [Man](https://linux.die.net/man/): More descriptive help pages for commands.
-- [FFmpeg](https://ffmpeg.org): Usefull for dealing with all kinds of files.
+- [FFmpeg](https://ffmpeg.org): Useful for dealing with all kinds of files.
 - [SSH](https://linux.die.net/man/1/ssh): For secure shell.
 - [Git](https://git-scm.com): For version control.
-- [Unzip](https://linux.die.net/man/1/unzip): Dealling with `zip` files.
+- [Unzip](https://linux.die.net/man/1/unzip): Dealing with `zip` files.
 - [FIGlet](http://www.figlet.org): ASCII art headers.
 - [curl](https://curl.se): For requesting data.
 - [NASM](https://www.nasm.us): For assembly programming.
