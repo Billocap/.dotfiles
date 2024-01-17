@@ -43,14 +43,8 @@ As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL
 
 Here's a list of all the deps and apps I configured:
 
-- [Vim](https://www.vim.org): I opted for Vim because I wanted to keep my text editor simple as I used Vscode for work.
-  - [vim-plug](https://github.com/junegunn/vim-plug): Plugin Manager for Vim. Don't forget to run a `:PlugInstall` once you open Vim.
-  - [NERDTree](https://github.com/preservim/nerdtree): For better navigation in the files folder.
-    - [vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight)
-    - [nerdtree-git-plugin](https://github.com/xuyuanp/nerdtree-git-plugin)
-  - [VimDevIcons](https://github.com/ryanoasis/vim-devicons): Adds some fancy icons to your files in the file explorer.
-  - [fugitive.vim](https://github.com/tpope/vim-fugitive): Allows you to run `git` commands from Vim.
-  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): Side bar the shows what modifications were made in the file.
+- [Neovim](https://neovim.io): Using Neovim with NvChad. I use Vscode for work and Neovim for study projects.
+  - [NvChad](https://nvchad.com): Awesome collection of Neovim configs.
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh): I use `zsh` as my main shell.
   - Plain Theme: Theme for zsh I wrote based on the default Linux theme.
   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting): Highlight the command so you can spot any typos or verify if the command really exists.
