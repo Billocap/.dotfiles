@@ -6,4 +6,3 @@ sudo apt install build-essential libssl-dev cmake libncurses5-dev libncursesw5-d
 git clone "https://github.com/zoelabbb/conio.h.git"
 
 sudo cp $MISC_FOLDER/conio.h /usr/include/
-
