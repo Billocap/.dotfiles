@@ -52,4 +52,3 @@ eval $1 2>&1 | while read LINE; do clamp_output "$LINE"; done
 [ -f $BANNER_FILE ] && rm $BANNER_FILE
 
 tput cnorm
-
