@@ -17,4 +17,4 @@ cd ..
 
 rm -rf .local/share/nvim
 
-git clone https://github.com/NvChad/starter ~/.config/nvim
+git clone https://github.com/NvChad/starter $WORKDIR/.config/nvim

@@ -1,27 +1,24 @@
 #!/bin/bash
 
-sudo apt install figlet -y
-
 # Necessary variables
-HOME_FOLDER=~/.dotfiles
+WORKDIR=~
+
+[ ! -d $WORKDIR ] && WORKDIR=$(pwd)
+
+HOME_FOLDER=$WORKDIR/.dotfiles
 MODULES_FOLDER=$HOME_FOLDER/modules
 CONFIGS_FOLDER=$HOME_FOLDER/configs
 FONTS_FOLDER=$HOME_FOLDER/fonts
 MISC_FOLDER=$HOME_FOLDER/misc
+DISTRO_FOLDER=$HOME_FOLDER/distros
 
-ln -s $CONFIGS_FOLDER/.gitconfig ~/.gitconfig
+ln -s $CONFIGS_FOLDER/.gitconfig $WORKDIR/.gitconfig
 
-install() {
-  sudo apt install ssh wget man ffmpeg unzip -y
-
-  # Install all deps
-  MODULES=$(ls -f $MODULES_FOLDER -I . -I ..)
-  for MODULE in $MODULES; do
-    . $MODULES_FOLDER/$MODULE
-  done
-}
+case $1 in
+  "arch") . $DISTRO_FOLDER/arch.sh;;
+  *) . $DISTRO_FOLDER/any.sh;;
+esac
 
 sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
 . $HOME_FOLDER/screen.sh "install"
-

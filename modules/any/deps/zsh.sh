@@ -3,7 +3,7 @@
 # Prepares ZSH shell
 
 # Necessary variables
-ZSH_FOLDER=~/.oh-my-zsh
+ZSH_FOLDER=$WORKDIR/.oh-my-zsh
 THEMES_FOLDER=$ZSH_FOLDER/themes
 PLUGINS_FOLDER=$ZSH_FOLDER/custom/plugins
 
@@ -22,5 +22,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $PLUGINS_FOLDER/zsh-a
 git clone https://github.com/supercrabtree/k $PLUGINS_FOLDER/k
 
 # Applies the changes
-[ -f ~/.zshrc ] && rm ~/.zshrc
-ln -s $CONFIGS_FOLDER/.zshrc ~/.zshrc
+[ -f $WORKDIR/.zshrc ] && rm $WORKDIR/.zshrc
+ln -s $CONFIGS_FOLDER/.zshrc $WORKDIR/.zshrc
