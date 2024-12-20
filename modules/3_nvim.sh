@@ -9,12 +9,12 @@ sudo apt install gettext -y
 
 git clone https://github.com/neovim/neovim
 
-cd neovim && git checkout stable
+cd neovim 
 
-make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
+git checkout stable && sudo make install
 
 cd ..
 
 rm -rf .local/share/nvim
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone https://github.com/NvChad/starter ~/.config/nvim
