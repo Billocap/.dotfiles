@@ -14,10 +14,11 @@ DISTRO_FOLDER=$HOME_FOLDER/distros
 
 ln -s $CONFIGS_FOLDER/.gitconfig $WORKDIR/.gitconfig
 
-case $1 in
-  "arch") . $DISTRO_FOLDER/arch.sh;;
-  *) . $DISTRO_FOLDER/any.sh;;
-esac
+DISTRO_INSTALLER=$DISTRO_FOLDER/$1.sh
+
+[ ! -f $DISTRO_INSTALLER ] && DISTRO_INSTALLER=$DISTRO_FOLDER/any.sh
+
+. $DISTRO_INSTALLER
 
 sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
