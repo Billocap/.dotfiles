@@ -16,13 +16,29 @@ All though that's a very personal and subjective project feel free to Fork it or
 
 Run the following command in the machine you plan to install the configs.
 
+### Arch Linux
+
+```shell
+git clone -b wip-arch-linux "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/install.sh arch
+```
+
+### Ubuntu/Debian
+
 ```shell
 git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/install.sh
 ```
 
-**!important**
-
+> [!important]
+>
 > To perform the installation you will need `git` and `curl`. In case you don't have those apps use the command bellow to install them.
+>
+> **Arch Linux**
+>
+> ```shell
+> sudo pacman -Sy base-devel curl
+> ```
+>
+> **Ubuntu/Debian**
 >
 > ```shell
 > sudo apt update && sudo apt upgrade -y && sudo apt install git curl -y
