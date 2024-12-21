@@ -19,7 +19,7 @@ Run the following command in the machine you plan to install the configs.
 ### Arch Linux
 
 ```shell
-git clone -b wip-arch-linux "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/install.sh arch
+git clone "https://github.com/Billocap/.dotfiles" ~/.dotfiles && bash ~/.dotfiles/install.sh arch
 ```
 
 ### Ubuntu/Debian
