@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installs NASM
-sudo apt update && sudo apt install nasm -y
+sudo sudo pacman -Sy nasm
 
 # Installs Elixir
-sudo apt install erlang-dev elixir -y
+sudo sudo pacman -Sy erlang elixir
