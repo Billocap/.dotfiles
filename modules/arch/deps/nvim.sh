@@ -5,7 +5,7 @@
 # Build Neo VIM
 
 # Necessary deps
-sudo apt install gettext -y
+sudo pacman -Sy gettext
 
 git clone https://github.com/neovim/neovim
 
