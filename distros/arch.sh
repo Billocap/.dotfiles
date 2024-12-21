@@ -1,9 +1,9 @@
 #!/bin/bash
 
-sudo apt install figlet -y
+sudo pacman -Sy figlet
 
 install() {
-  sudo apt install ssh wget man ffmpeg unzip -y
+  sudo pacman -Sy ssh wget man ffmpeg unzip
 
   # Install all deps
   MODULES=$(cat $MODULES_FOLDER/arch/manifest)
@@ -11,4 +11,3 @@ install() {
     . $MODULES_FOLDER/arch/deps/$MODULE.sh
   done
 }
-
