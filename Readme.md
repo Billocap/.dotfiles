@@ -8,7 +8,7 @@
 Y8P `Y8bod88P" `Y8bod8P'   "888" o888o   o888o o888o `Y8bod8P' 8""888P'
 </pre>
 
-Repository for configuring my Linux based environments, I use those config mostly for WSL Ubuntu and Debian. This was supposed to be a simple project but a got carried away.
+Repository for configuring my Linux based environments, I use those config mostly for WSL. This was supposed to be a simple project but a got carried away.
 
 All though that's a very personal and subjective project feel free to Fork it or recommend configs and apps.
 
