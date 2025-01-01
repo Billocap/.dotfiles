@@ -1,0 +1,4 @@
+{
+  "arch": ["zsh", "c", "nvim", "node", "extras"],
+  "any": ["zsh", "c", "nvim", "node", "extras"]
+}
