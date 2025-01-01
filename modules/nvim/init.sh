@@ -2,14 +2,12 @@
 
 # Prepares NEO VIM editor
 
-# Build Neo VIM
-
 # Necessary deps
-sudo apt install gettext -y
+. $MODULE_FOLDER/$SELECTED_DISTRO/install.sh
 
 git clone https://github.com/neovim/neovim
 
-cd neovim 
+cd neovim
 
 git checkout stable && sudo make install
 

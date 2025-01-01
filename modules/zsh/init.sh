@@ -8,7 +8,8 @@ THEMES_FOLDER=$ZSH_FOLDER/themes
 PLUGINS_FOLDER=$ZSH_FOLDER/custom/plugins
 
 # Installs zsh and sets it as the default shell
-sudo pacman -Sy zsh
+. $MODULE_FOLDER/$SELECTED_DISTRO/install.sh
+
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 sudo usermod --shell $(which zsh) $USER
 

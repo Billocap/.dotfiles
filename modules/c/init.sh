@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installs C related deps
-sudo apt install build-essential libssl-dev cmake libncurses5-dev libncursesw5-dev gdb -y
+. $MODULE_FOLDER/$SELECTED_DISTRO/install.sh
 
 git clone "https://github.com/zoelabbb/conio.h.git"
 
