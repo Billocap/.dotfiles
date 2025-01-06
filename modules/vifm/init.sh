@@ -5,6 +5,9 @@
 # Necessary deps
 . $MODULE_FOLDER/$SELECTED_DISTRO/install.sh
 
+# Creates the configuration folder for vifm
+vifm -c q
+
 FM_FOLDER=$WORKDIR/.config/vifm
 
 if [ -d $FM_FOLDER ]; then
