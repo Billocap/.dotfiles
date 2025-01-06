@@ -8,5 +8,9 @@
 FM_FOLDER=$WORKDIR/.config/vifm
 
 if [ -d $FM_FOLDER ]; then
-  sudo cp -r $CONFIGS_FOLDER/vifm $FM_FOLDER
+  VIFM_CONFIGS=$CONFIGS_FOLDER/vifm
+  
+  for FILE in $(ls -a $VIFM_CONFIGS); do
+    sudo cp $VIFM_CONFIGS/$FILE $FM_FOLDER/$FILE
+  done
 fi
