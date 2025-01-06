@@ -1,5 +1,7 @@
 #!/bin/bash
 
-# Installs C related deps
+# Prepares NEO VIM editor
+
+# Necessary deps
 . $MODULE_FOLDER/$SELECTED_DISTRO/install.sh
 
