@@ -59,6 +59,7 @@ As mentioned earlier I use this configs for my [Windows Subsystem for Linux (WSL
 
 Here's a list of all the deps and apps I configured:
 
+- [Vifm](https://vifm.info/l): Vifm is a file manager with curses interface, which provides Vim-like environment for managing objects within file systems, extended with some useful ideas from mutt.
 - [Neovim](https://neovim.io): Using Neovim with NvChad. I use Vscode for work and Neovim for study projects.
   - [NvChad](https://nvchad.com): Awesome collection of Neovim configs.
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh): I use `zsh` as my main shell.

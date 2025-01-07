@@ -77,6 +77,35 @@ set classify+=" ::/\\.(|di)c$/::"
 set classify+=" ::<text/lua>::"
 set classify+=" ::/\\.lua$/::"
 
+" Blade 
+set classify+=" ::/\\.blade\\.php$/::"
+
+" Elixir 
+set classify+=" ::/\\.ex(|s)$/::"
+
+" Docker 
+set classify+=" ::/^Dockerfile/::"
+set classify+=" ::/^(|.)docker/::"
+
+" Vim 
+set classify+=" ::/^(|\\.)vim/::"
+set classify+=" ::/\\.vim$/::"
+" Vifm 
+set classify+=" ::/^(|\\.)vifm/::"
+set classify+=" ::/\\.vifm$/::"
+
+" Godot 
+set classify+=" ::/\\.(gd.*|godot)$/::"
+set classify+=" ::/\\.((|t)scn|res)$/::"
+set classify+=" ::/\\.import$/::"
+
+" Php 
+set classify+=" ::/\\.php/::"
+set classify+=" ::/^php/::"
+
+" Git 
+set classify+=" ::/^\\.git/::"
+
 " Configuration files 
 set classify+=" ::<application/yaml>::"
 set classify+=" ::/\\.(ya?ml|ini|conf)$/::"

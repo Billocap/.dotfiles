@@ -8,6 +8,10 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 
+" Split screen
+nnoremap <space>h :split<cr>
+nnoremap <space>v :vsplit<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 

@@ -8,6 +8,10 @@
 
 " -----------------------------------------------------------------------------
 
+" List of color schemes to try (picks the first one supported by the terminal)
+
+colorscheme Gruvbox-256 Gruv
+
 :so ~/.config/vifm/configs/mimetypes.vim
 :so ~/.config/vifm/configs/tabline.vim
 :so ~/.config/vifm/configs/statusline.vim
@@ -66,10 +70,6 @@ set vimhelp
 " press Enter, l or Right Arrow, set this.
 
 set norunexec
-
-" List of color schemes to try (picks the first one supported by the terminal)
-
-colorscheme Gruvbox Gruv
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M

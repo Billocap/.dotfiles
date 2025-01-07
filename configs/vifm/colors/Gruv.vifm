@@ -48,29 +48,49 @@
 
 highlight clear
 
-" Windows
+" Internal area of a tab
 " Selected window
-highlight Win cterm=bold ctermfg=white ctermbg=black
+highlight Win ctermfg=white ctermbg=default
 " Deselected window
-highlight OtherWin cterm=none ctermfg=lightblack ctermbg=black
+highlight OtherWin ctermfg=lightblack ctermbg=default
 " Auxiliary window
-highlight AuxWin cterm=none termfg=white ctermbg=black
+highlight AuxWin ctermfg=white ctermbg=default
+" Box of auto complete suggestions
+highlight SuggestBox ctermfg=white ctermbg=default
+highlight WildMenu ctermfg=white ctermbg=red
 
-" External details
 " Border between panes
-highlight Border ctermfg=black ctermbg=black
+highlight Border ctermfg=black ctermbg=default
 " Tab lines
-highlight TabLine cterm=none ctermfg=lightblack ctermbg=black
-highlight TabLineSel cterm=none ctermfg=black ctermbg=blue
-" Top lines
-highlight TopLine cterm=none ctermfg=lightblack ctermbg=black
-highlight TopLineSel cterm=none ctermfg=cyan ctermbg=black
+" When the tab line is separated from the tabs
+highlight TabLine cterm=none ctermfg=lightblack ctermbg=default
+" Color for the whole top bar
+highlight TopLine cterm=none ctermfg=lightblack ctermbg=default
+" Color for the topline that contains the current tab
+highlight TopLineSel cterm=none ctermfg=cyan ctermbg=default
+" Current Selected tab
+highlight TabLineSel cterm=none ctermfg=black ctermbg=cyan
 " StatusLine
-highlight StatusLine ctermfg=default ctermbg=default
+highlight StatusLine cterm=none ctermfg=default ctermbg=default
 " CmdLine
-highlight CmdLine ctermfg=default ctermbg=default
+highlight CmdLine cterm=none ctermfg=default ctermbg=default
 " JobLine
-highlight JobLine ctermfg=default ctermbg=default
+highlight JobLine cterm=none ctermfg=default ctermbg=default
+" File lines
+highlight OddLine cterm=none ctermfg=default ctermbg=default
+highlight CurrLine cterm=inverse ctermfg=default ctermbg=default
+highlight OtherLine cterm=italic ctermfg=default ctermbg=black
+highlight LineNr cterm=none ctermfg=lightblack ctermbg=default
+
+" Leafs
+highlight Selected cterm=none ctermfg=lightblue ctermbg=black
+highlight Directory cterm=none ctermfg=blue ctermbg=default
+" Symlinks
+highlight Link cterm=underline ctermfg=cyan ctermbg=default
+highlight BrokenLink cterm=underline ctermfg=red ctermbg=default
+highlight HardLink cterm=bold,underline ctermfg=cyan ctermbg=default
+" Files
+highlight Executable cterm=none ctermfg=lightmagenta ctermbg=default
 
 " User defined groups
 highlight User1 ctermfg=default ctermbg=default
