@@ -84,3 +84,4 @@ set classify+=" ::/\\.(ya?ml|ini|conf)$/::"
 " Text 
 set classify+=" ::<text/*>::"
 set classify+=" ::/\\.(l(og|ist)|(te?xt))$/::"
+
