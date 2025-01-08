@@ -9,13 +9,13 @@ VIFM_TAR_TARGET=$WORKDIR/vifm-0.13
 VIFM_CONFIG_DIR=$WORKDIR/.config/vifm
 
 # Builds Vifm
-tar -xvjf $VIFM_TAR_FILE -C $VIFM_TAR_TARGET
+tar -xvjf $VIFM_TAR_FILE -C $VIFM_TAR_TARGET --strip-components=1
 
 sudo chmod -R ugo+rwx $VIFM_TAR_TARGET
 
 cd $VIFM_TAR_TARGET
 
-sudo . configure && sudo make && sudo make install
+sudo ./configure && sudo make && sudo make install
 
 cd $WORKDIR
 
@@ -27,3 +27,6 @@ sudo cp -r $CONFIGS_FOLDER/vifm/* $VIFM_CONFIG_DIR
 
 # Allows user to edit the configuration files
 sudo chmod -R ugo+rw $VIFM_CONFIG_DIR
+
+sudo rm -rf $VIFM_TAR_TARGET
+
