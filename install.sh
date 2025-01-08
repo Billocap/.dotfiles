@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Necessary global variables
-WORKDIR=~
+WORKDIR=$HOME
 
 [ ! -d $WORKDIR ] && WORKDIR=$(pwd)
 

@@ -9,7 +9,7 @@ VIFM_TAR_TARGET=$WORKDIR/vifm-0.13
 VIFM_CONFIG_DIR=$WORKDIR/.config/vifm
 
 # Builds Vifm
-tar -xvjf $VIFM_TAR_FILE -C $VIFM_TAR_TARGET --strip-components=1
+tar -xvjf $VIFM_TAR_FILE -C $WORKDIR
 
 sudo chmod -R ugo+rwx $VIFM_TAR_TARGET
 
