@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo pacman -Sy vifm
+sudo pacman -Sy tar
