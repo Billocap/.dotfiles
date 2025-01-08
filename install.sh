@@ -32,6 +32,8 @@ DISTRO_INSTALLER=$DISTRO_FOLDER/$SELECTED_DISTRO.sh
 sudo cp $FONTS_FOLDER/figlet/* /usr/share/figlet
 
 install() {
+  pre_install
+
   # Install all deps
   MANIFEST_JSON=$MODULES_FOLDER/manifest.json
   MODULES=$(jq ".[\"$SELECTED_DISTRO\"][]" $MANIFEST_JSON)
