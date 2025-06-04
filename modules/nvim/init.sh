@@ -17,7 +17,7 @@ cd ..
 
 sudo rm -rf $WORKDIR/.local/share/nvim
 
-git clone https://github.com/Billocap/nvchad-config $WORKDIR/.config/nvim
+git clone https://github.com/Billocap/nvim-config.git $WORKDIR/.config/nvim
 
 sudo rm -rf $NVIM_BUILD_DIR
 
