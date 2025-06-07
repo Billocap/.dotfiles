@@ -1,4 +1,4 @@
 {
-  "arch": ["zsh", "c", "nvim", "node", "vifm", "extras"],
-  "any": ["zsh", "c", "nvim", "node", "vifm", "lua", "extras"]
+  "arch": ["zsh", "c", "nvim", "node", "vifm", "lazygit", "extras"],
+  "any": ["zsh", "c", "nvim", "node", "vifm", "lazygit", "lua", "extras"]
 }
